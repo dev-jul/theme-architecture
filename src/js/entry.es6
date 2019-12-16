@@ -1,4 +1,4 @@
-require("../sass/style.scss");
+require("../sass/main.scss");
 
 require('../fonts/fontello/css/fontello.css');
 

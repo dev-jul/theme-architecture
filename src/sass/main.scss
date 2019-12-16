@@ -1,10 +1,8 @@
-@import "lem_mixins/lem_mixins";
+@import "libs/lem_mixins/lem_mixins";
 
 @import "helpers/mixins";
 @import "helpers/variables";
 @import "helpers/keyframes";
-
-@import "vendors/*";
 
 @import "base/reset";
 @import "base/fonts";
@@ -12,11 +10,12 @@
 @import "base/general";
 
 @import "partials/header";
-@import "partials/grid";
 @import "partials/footer";
+@import "partials/grid";
 
 @import "components/buttons";
 @import "components/collapse";
 @import "components/modal";
 
-@import "pages/home";
+@import "templates/page-builder/some-section.scss";
+@import "templates/some-template";
