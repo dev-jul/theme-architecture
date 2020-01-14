@@ -1,23 +1,255 @@
 body {
-  font-family: $main-font-family-1;
-  font-size: 16px;
-  color: $main-text-color-1;
-  line-height: 1.3;
-  font-weight: 400;
-}
-
-.main-ttl-1 {
-  font-size: 40px;
-  font-family: $main-font-family-2;
-  text-transform: uppercase;
-  text-align: center;
-}
-
-.main-p {
-  letter-spacing: -0.45px;
+  color: $text-color;
+  font-size: $base-font-size;
+  font-family: $base-font-family;
+  font-weight: $base-font-weight;
   line-height: 1.6;
+}
 
-  p+p {
-    margin: 40px 0 0;
+.content {
+  font-family: $base-font-family;
+  font-size: 18px;
+  @include adaptive-font-size(1919, 400, 18, 16, true);
+  line-height: 1.5;
+  color: $main-text-color-1;
+
+  p {
+    font-size: 18px;
+    @include adaptive-font-size(1919, 400, 18, 16, true);
+  }
+
+  p {
+
+    + p {
+      margin: 35px 0 0;
+    }
+
+    + h1 {
+      margin-top: 50px;
+    }
+
+    + h2 {
+      margin-top: 50px;
+    }
+
+    + h3 {
+      margin-top: 40px;
+    }
+
+    + h4 {
+      margin-top: 30px;
+    }
+
+    + h5 {
+      margin-top: 30px;
+    }
+
+    + h6 {
+      margin-top: 30px;
+    }
+  }
+
+  .wp-caption {
+
+    + p {
+      margin: 35px 0 0;
+    }
+  }
+
+  strong {
+    font-weight: 700;
+  }
+
+  em {
+    font-style: italic;
+  }
+
+  a {
+    transition: .5s;
+    display: inline-block;
+    font-family: $base-font-family;
+    color: #000000;
+    text-decoration: underline;
+
+    &:hover {
+
+    }
+  }
+
+  ul {
+    padding: 20px 0 0 20px;
+
+    li {
+      list-style-type: disc;
+
+      + li {
+        margin-top: 15px;
+      }
+    }
+
+    + p {
+      margin-top: 20px;
+    }
+  }
+
+  ol {
+    padding: 15px 0 0 20px;
+
+    li {
+      list-style-type: decimal;
+
+      + li {
+        padding-top: 15px;
+      }
+    }
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: $base-font-family;
+    line-height: 1.2;
+    display: inline-block;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    font-size: 36px;
+    @include adaptive-font-size(1919, 400, 36, 26, true);
+    margin: 10px 0;
+  }
+
+  h2 {
+    font-size: 34px;
+    @include adaptive-font-size(1919, 400, 34, 24, true);
+    margin: 8px 0;
+  }
+
+  h3 {
+    font-size: 32px;
+    @include adaptive-font-size(1919, 400, 32, 22, true);
+    margin: 10px 0;
+  }
+
+  h4 {
+    font-size: 30px;
+    @include adaptive-font-size(1919, 400, 30, 20, true);
+    margin: 10px 0;
+  }
+
+  h5 {
+    font-size: 28px;
+    @include adaptive-font-size(1919, 400, 28, 18, true);
+    margin: 10px 0;
+  }
+
+  h6 {
+    font-size: 26px;
+    @include adaptive-font-size(1919, 400, 26, 16, true);
+    margin: 10px 0;
+  }
+
+  blockquote {
+    padding: 35px 20px 35px 0;
+    border-top: 2px dashed #a7aaae;
+    border-bottom: 2px dashed #a7aaae;
+    margin: 55px 0;
+    position: relative;
+    @media (max-width: 1100px) {
+      padding: 35px 20px 35px 50px;
+    }
+
+    &:before {
+      content: '\E806';
+      font-family: fontello;
+      position: absolute;
+      left: -106px;
+      top: 24px;
+      color: $red;
+      font-size: 36px;
+      @media (max-width: 1100px) {
+        left: 0;
+      }
+    }
+
+    p {
+      font-family: $base-font-family;
+      font-weight: 700;
+      font-size: 28px;
+      @include adaptive-font-size(1919, 400, 28, 17, true);
+    }
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  img.size-thumbnail {
+    max-width: 150px;
+    width: auto;
+    height: auto;
+  }
+
+  img.size-medium {
+    max-width: 300px;
+    width: auto;
+    height: auto;
+  }
+
+  img.size-large {
+    max-width: 1024px;
+    height: auto;
+    width: auto;
+  }
+
+  img.size-full {
+    max-width: 100%;
+    height: auto;
+    width: auto;
+  }
+
+  img.aligncenter {
+    margin: 0 auto;
+    display: block;
+    padding: 20px 0;
+  }
+
+  img.alignright {
+    display: block;
+    float: right;
+    padding: 25px 0 20px 35px;
+
+    @media (min-width: 971px) {
+      margin-right: -100px;
+    }
+
+    @media (max-width: 768px) {
+      padding: 20px 0 20px 20px;
+    }
+    @media (max-width: 550px) {
+      float: none;
+    }
+    @media (max-height: 550px) {
+      float: none;
+    }
+  }
+
+  img.alignleft {
+    display: block;
+    float: left;
+    padding: 25px 35px 20px 0;
+
+    @media (min-width: 971px) {
+      margin-left: -100px;
+    }
+
+    @media (max-width: 768px) {
+      padding: 20px 20px 20px 0;
+    }
+    @media (max-width: 550px) {
+      float: none;
+    }
+    @media (max-height: 550px) {
+      float: none;
+    }
   }
 }
