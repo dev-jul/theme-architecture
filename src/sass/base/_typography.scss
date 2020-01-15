@@ -9,21 +9,49 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: $title-font;
   line-height: 1.5;
-  font-weight: 700;
   color: $title-color;
+  font-weight: 700;
   text-transform: uppercase;
 }
 
 h1 {
-  font-size: 56px;
+  font-size: 60px;
+  @include adaptive-font-size(1919, 400, 60, 40, true);
 }
 
 h2 {
-  font-size: 36px;
+  font-size: 56px;
+  @include adaptive-font-size(1919, 400, 56, 36, true);
 }
 
 h3 {
-  font-size: 32px;
+  font-size: 52px;
+  @include adaptive-font-size(1919, 400, 52, 32, true);
+}
+
+h4 {
+  font-size: 48px;
+  @include adaptive-font-size(1919, 400, 48, 28, true);
+}
+
+h5 {
+  font-size: 44px;
+  @include adaptive-font-size(1919, 400, 44, 24, true);
+}
+
+h6 {
+  font-size: 40px;
+  @include adaptive-font-size(1919, 400, 40, 20, true);
+}
+
+a {
+  display: inline-block;
+  color: $text-color;
+  transition: .5s;
+
+  &:hover {
+    color: $accent-color;
+  }
 }
 
 a {
@@ -40,8 +68,7 @@ a {
 .content {
   font-family: $text-font;
   font-size: 18px;
-  @include adaptive-font-size(1280, 400, 18, 14, true);
-  @include adaptive-font-size(1280, 400, 188, 14, true);
+  @include adaptive-font-size(1919, 400, 18, 14, true);
   line-height: 1.5;
   color: $text-color;
 
