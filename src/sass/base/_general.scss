@@ -28,3 +28,72 @@ button {
     bottom: 0;
   }
 }
+
+img {
+  max-width: 100%;
+}
+
+.content {
+
+  img.size-thumbnail {
+    max-width: 150px;
+    width: auto;
+    height: auto;
+  }
+
+  img.size-medium {
+    max-width: 300px;
+    width: auto;
+    height: auto;
+  }
+
+  img.size-large {
+    max-width: 1024px;
+    height: auto;
+    width: auto;
+  }
+
+  img.size-full {
+    max-width: 100%;
+    height: auto;
+    width: auto;
+  }
+
+  img.aligncenter {
+    margin: 0 auto;
+    display: block;
+    padding: 20px 0;
+  }
+
+  img.alignright {
+    display: block;
+    float: right;
+    padding: 25px 0 20px 35px;
+
+    @media (max-width: 768px) {
+      padding: 20px 0 20px 20px;
+    }
+    @media (max-width: 550px) {
+      float: none;
+    }
+    @media (max-height: 550px) {
+      float: none;
+    }
+  }
+
+  img.alignleft {
+    display: block;
+    float: left;
+    padding: 25px 35px 20px 0;
+
+    @media (max-width: 768px) {
+      padding: 20px 20px 20px 0;
+    }
+    @media (max-width: 550px) {
+      float: none;
+    }
+    @media (max-height: 550px) {
+      float: none;
+    }
+  }
+}

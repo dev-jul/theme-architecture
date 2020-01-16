@@ -44,27 +44,6 @@ h6 {
   @include adaptive-font-size(1919, 400, 40, 20, true);
 }
 
-a {
-  display: inline-block;
-  color: $text-color;
-  transition: .5s;
-
-  &:hover {
-    color: $accent-color;
-  }
-}
-
-a {
-  display: inline-block;
-  color: $text-color;
-  text-decoration: none;
-  transition: .5s;
-
-  &:hover {
-    color: $accent-color;
-  }
-}
-
 .content {
   font-family: $text-font;
   font-size: 18px;
@@ -241,99 +220,5 @@ a {
       font-size: 24px;
       @include adaptive-font-size(1919, 400, 24, 16, true);
     }
-  }
-
-  img {
-    max-width: 100%;
-  }
-
-  img.size-thumbnail {
-    max-width: 150px;
-    width: auto;
-    height: auto;
-  }
-
-  img.size-medium {
-    max-width: 300px;
-    width: auto;
-    height: auto;
-  }
-
-  img.size-large {
-    max-width: 1024px;
-    height: auto;
-    width: auto;
-  }
-
-  img.size-full {
-    max-width: 100%;
-    height: auto;
-    width: auto;
-  }
-
-  img.aligncenter {
-    margin: 0 auto;
-    display: block;
-    padding: 20px 0;
-  }
-
-  img.alignright {
-    display: block;
-    float: right;
-    padding: 25px 0 20px 35px;
-
-    @media (max-width: 768px) {
-      padding: 20px 0 20px 20px;
-    }
-    @media (max-width: 550px) {
-      float: none;
-    }
-    @media (max-height: 550px) {
-      float: none;
-    }
-  }
-
-  img.alignleft {
-    display: block;
-    float: left;
-    padding: 25px 35px 20px 0;
-
-    @media (max-width: 768px) {
-      padding: 20px 20px 20px 0;
-    }
-    @media (max-width: 550px) {
-      float: none;
-    }
-    @media (max-height: 550px) {
-      float: none;
-    }
-  }
-}
-
-//examples
-.section-type-1 {
-  .section-title {
-    color: $title-color;
-    font-family: $title-font;
-    font-size: 55px;
-    @include adaptive-font-size(1280, 320, 55, 30, true);
-    line-height: 1.5;
-    text-transform: uppercase;
-    letter-spacing: 6.3px;
-
-    @media (max-width: 1280px) {
-      //використовуємо адаптив font-size,або ж зменшуємо розмір    шрифтів, прописуючи через @media
-    }
-  }
-}
-
-.section-type-2 {
-  .section-subtitle {
-    font-size: 30px;
-    text-transform: uppercase;
-  }
-
-  .section-description {
-    font-size: 28px;
   }
 }
